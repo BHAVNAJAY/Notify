@@ -124,14 +124,18 @@ h1,h2,h3,h4,h5,h6 {
   border-right: 3px solid #1B3A6D;
   white-space: nowrap;
   width: 0;
-  animation: typing 2s steps(6) forwards, blink 0.75s step-end infinite;
+  animation: typing 2s steps(6) forwards, blink 0.75s step-end infinite, removeCursor 0s 2s forwards;
 }
 
 @keyframes typing {
   from { width: 0; }
-  to { width: 6ch; } /* Changed to 6 characters exactly */
+  to { width: 6ch; }
 }
 
 @keyframes blink {
   50% { border-color: transparent; }
+}
+
+@keyframes removeCursor {
+  to { border-right: none; }
 }
