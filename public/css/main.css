@@ -100,3 +100,29 @@ h1,h2,h3,h4,h5,h6 {
   right: -60px;
   bottom: -30px;
 }
+
+/* Loading Animation */
+.page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #B8E6F0;  /* Changed to light blue */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: slideUp 0.5s ease-out 3s forwards;
+}
+
+.typing-text {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #1B3A6D;  /* Changed to dark blue */
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  border-right: 3px solid #1B3A6D;  /* Changed cursor to dark blue */
+  white-space: nowrap;
+  animation: typing 2s steps(6) 0.5s forwards, blink 0.75s step-end infinite;
+}
