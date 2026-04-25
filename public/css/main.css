@@ -129,7 +129,7 @@ h1,h2,h3,h4,h5,h6 {
 
 @keyframes typing {
   from { width: 0; }
-  to { width: 320px; } /* Adjust based on text width */
+  to { width: 6ch; } /* Changed to 6 characters exactly */
 }
 
 @keyframes blink {
