@@ -6,20 +6,25 @@
         <h2 class="mb-0 fw-bold">Notify</h2>
       </a>
 
-      <!-- Navigation Links (Centered) -->
-     <ul>
-  <li><a href="/">Home</a></li>
-  <li><a href="/features">Features</a></li>
-  <li><a href="/about">About</a></li>
-  <% if (user) { %>
-    <li><a href="/dashboard">Dashboard</a></li>
-  <% } %>
-</ul>
+      <!-- Navigation Links -->
+      <ul class="nav d-none d-md-flex mx-auto">
+        <li class="nav-item"><a href="/" class="nav-link px-3 text-white">Home</a></li>
+        <li class="nav-item"><a href="/features" class="nav-link px-3 text-white">Features</a></li>
+        <li class="nav-item"><a href="/about" class="nav-link px-3 text-white">About</a></li>
+        <% if (user) { %>
+          <li class="nav-item"><a href="/dashboard" class="nav-link px-3 text-white">Dashboard</a></li>
+        <% } %>
+      </ul>
 
-      <!-- Sign Up and Sign In Buttons -->
-      <div class="d-flex gap-2">
-        <a href="/auth/google" class="btn btn-outline-light">Sign Up</a>
-        <a href="/auth/google" class="btn btn-light">Sign In</a>
+      <!-- Buttons (Right Side) -->
+      <div class="d-flex gap-2 ms-auto">
+        <% if (user) { %>
+          <a href="/dashboard/add" class="btn btn-light">+ New Note</a>
+          <a href="/logout" class="btn btn-outline-light">Logout</a>
+        <% } else { %>
+          <a href="/auth/google" class="btn btn-outline-light">Sign Up</a>
+          <a href="/auth/google" class="btn btn-light">Sign In</a>
+        <% } %>
       </div>
     </div>
   </nav>
