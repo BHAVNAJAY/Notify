@@ -9,7 +9,8 @@ exports.homepage = async (req, res) => {
   }
   res.render('index', {
     locals,
-    layout: '../views/layouts/front-page'
+    layout: '../views/layouts/front-page',
+    user: req.user
   });
 }
 
@@ -24,7 +25,8 @@ exports.features = async (req, res) => {
   }
   res.render('features', {
     locals,
-    layout: '../views/layouts/main'  // ADDED THIS LINE
+    layout: '../views/layouts/main',
+    user: req.user
   });
 }
 
@@ -39,6 +41,7 @@ exports.about = async (req, res) => {
   }
   res.render('about', {
     locals,
-    layout: '../views/layouts/main'  // ADDED THIS LINE
+    layout: '../views/layouts/main',
+    user: req.user
   });
 }
