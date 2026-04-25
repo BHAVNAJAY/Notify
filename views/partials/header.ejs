@@ -7,11 +7,14 @@
       </a>
 
       <!-- Navigation Links (Centered) -->
-      <ul class="nav mx-auto">
-        <li class="nav-item"><a href="/" class="nav-link px-3 text-white">Home</a></li>
-        <li class="nav-item"><a href="/features" class="nav-link px-3 text-white">Features</a></li>
-        <li class="nav-item"><a href="/about" class="nav-link px-3 text-white">About</a></li>
-      </ul>
+     <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/features">Features</a></li>
+  <li><a href="/about">About</a></li>
+  <% if (user) { %>
+    <li><a href="/dashboard">Dashboard</a></li>
+  <% } %>
+</ul>
 
       <!-- Sign Up and Sign In Buttons -->
       <div class="d-flex gap-2">
